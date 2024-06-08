@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing System</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .billing-system {
+        background-color: #d1c4e9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .billing-system h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .bill-area {
+        background-color: white;
+        padding: 2px;
+        border: 1px solid #ccc; 
+        margin-top: 20px;
+      }
+      .summary,
+      .controls {
+        margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container billing-system">
+        <h1>Billing System</h1>
+        <form id="billingForm">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" class="form-control" id="customerName" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="contactNo">Contact No.</label>
+                    <input type="text" class="form-control" id="contactNo" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="billNo">Bill No.</label>
+                    <input type="text" class="form-control" id="billNo" value="7553" readonly />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Snacks</h3>
+                    <div class="form-group">
+                        <label for="nutella">Nutella Choco Spread</label>
+                        <input type="number" class="form-control" id="nutella" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="noodles">Noodles</label>
+                        <input type="number" class="form-control" id="noodles" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lays">Lays</label>
+                        <input type="number" class="form-control" id="lays" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="oreo">Oreo</label>
+                        <input type="number" class="form-control" id="oreo" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="muffin">Chocolate Muffin</label>
+                        <input type="number" class="form-control" id="muffin" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="biscuits">Dairy Biscuits</label>
+                        <input type="number" class="form-control" id="biscuits" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="namkeen">Namkeen</label>
+                        <input type="number" class="form-control" id="namkeen" value="0" min="0" />
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h3>Grocery</h3>
+                    <div class="form-group">
+                        <label for="atta">Ashirwad Atta</label>
+                        <input type="number" class="form-control" id="atta" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="pasta">Pasta</label>
+                        <input type="number" class="form-control" id="pasta" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="rice">Basmati Rice</label>
+                        <input type="number" class="form-control" id="rice" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="oil">Sunflower Oil</label>
+                        <input type="number" class="form-control" id="oil" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="sugar">Refined Sugar</label>
+                        <input type="number" class="form-control" id="sugar" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dal">Dal</label>
+                        <input type="number" class="form-control" id="dal" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="tea">Tea Powder</label>
+                        <input type="number" class="form-control" id="tea" value="0" min="0" />
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h3>Beauty & Hygiene</h3>
+                    <div class="form-group">
+                        <label for="soap">Bathing Soap</label>
+                        <input type="number" class="form-control" id="soap" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="shampoo">Shampoo</label>
+                        <input type="number" class="form-control" id="shampoo" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lotion">Body Lotion</label>
+                        <input type="number" class="form-control" id="lotion" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="faceCream">Face Cream</label>
+                        <input type="number" class="form-control" id="faceCream" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="shavingFoam">Shaving Foam</label>
+                        <input type="number" class="form-control" id="shavingFoam" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="faceMask">Face Mask</label>
+                        <input type="number" class="form-control" id="faceMask" value="0" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="sanitizer">Hand Sanitizer</label>
+                        <input type="number" class="form-control" id="sanitizer" value="0" min="0" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bill-area">
+                        <h5>Bill Area</h5>
+                        <div id="billContent">
+                            <p>WELCOME TO SUPER MARKET</p>
+                            <p>Phone: 789374510</p>
+                            <p>Bill No.: 7553</p>
+                            <p>Customer Name: <span id="billCustomerName"></span></p>
+                            <p>Contact No.: <span id="billContactNo"></span></p>
+                            <p>Product &emsp; Qty &emsp; Price</p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="billItems"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row summary">
+                <div class="col-md-4">
+                    <h4>Billing Summary</h4>
+                    <div class="form-group">
+                        <label for="totalSnacksPrice">Total Snacks Price</label>
+                        <input type="text" class="form-control" id="totalSnacksPrice" readonly />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="totalGroceryPrice">Total Grocery Price</label>
+                        <input type="text" class="form-control" id="totalGroceryPrice" readonly />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="totalBeautyPrice">Total Beauty & Hygiene Price</label>
+                        <input type="text" class="form-control" id="totalBeautyPrice" readonly />
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-4">
+                    <h4>Taxes</h4>
+                    <div class="form-group">
+                        <label for="snacksTax">Snacks Tax (5%)</label>
+                        <input type="text" class="form-control" id="snacksTax" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="groceryTax">Grocery Tax (2%)</label>
+                        <input type="text" class="form-control" id="groceryTax" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="beautyTax">Beauty & Hygiene Tax (10%)</label>
+                        <input type="text" class="form-control" id="beautyTax" readonly />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Total Bill</h4>
+                    <div class="form-group">
+                        <label for="grandTotal">Total Bill</label>
+                        <input type="text" class="form-control" id="grandTotal" readonly />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row controls">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" onclick="generateBill()">
+                        Generate Bill
+                    </button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const itemPrices = {
+            nutella: 50,
+            noodles: 30,
+            lays: 20,
+            oreo: 35,
+            muffin: 15,
+            biscuits: 10,
+            namkeen: 25,
+            atta: 50,
+            pasta: 20,
+            rice: 30,
+            oil: 80,
+            sugar: 40,
+            dal: 50,
+            tea: 60,
+            soap: 25,
+            shampoo: 120,
+            lotion: 100,
+            faceCream: 60,
+            shavingFoam: 150,
+            faceMask: 20,
+            sanitizer: 50,
+        };
+
+        const taxRates = {
+            snacks: 0.05, // 5% tax
+            grocery: 0.02, // 2% tax
+            beauty: 0.10, // 10% tax
+        };
+
+        function generateBill() {
+            if (!validateSelection()) {
+                return;
+            }
+
+            const customerName = document.getElementById('customerName').value;
+            const contactNo = document.getElementById('contactNo').value;
+            const billCustomerName = document.getElementById('billCustomerName');
+            const billContactNo = document.getElementById('billContactNo');
+            const billItems = document.getElementById('billItems');
+
+            billCustomerName.innerText = customerName;
+            billContactNo.innerText = contactNo;
+
+            let totalSnacksPrice = 0;
+            let totalGroceryPrice = 0;
+            let totalBeautyPrice = 0;
+            let billDetails = '';
+
+            Object.keys(itemPrices).forEach(item => {
+                const qty = document.getElementById(item).value;
+                if (qty > 0) {
+                    const price = itemPrices[item] * qty;
+                    billDetails += `<tr><td>${item}</td><td>${qty}</td><td>${price}</td></tr>`;
+
+                    if (['nutella', 'noodles', 'lays', 'oreo', 'muffin', 'biscuits', 'namkeen'].includes(item)) {
+                        totalSnacksPrice += price;
+                    } else if (['atta', 'pasta', 'rice', 'oil', 'sugar', 'dal', 'tea'].includes(item)) {
+                        totalGroceryPrice += price;
+                    } else {
+                        totalBeautyPrice += price;
+                    }
+                }
+            });
+
+            const snacksTax = totalSnacksPrice * taxRates.snacks;
+            const groceryTax = totalGroceryPrice * taxRates.grocery;
+            const beautyTax = totalBeautyPrice * taxRates.beauty;
+
+            const grandTotal = totalSnacksPrice + totalGroceryPrice + totalBeautyPrice + snacksTax + groceryTax + beautyTax;
+
+            document.getElementById('totalSnacksPrice').value = totalSnacksPrice;
+            document.getElementById('snacksTax').value = snacksTax.toFixed(2);
+            document.getElementById('totalGroceryPrice').value = totalGroceryPrice;
+            document.getElementById('groceryTax').value = groceryTax.toFixed(2);
+            document.getElementById('totalBeautyPrice').value = totalBeautyPrice;
+            document.getElementById('beautyTax').value = beautyTax.toFixed(2);
+            document.getElementById('grandTotal').value = grandTotal.toFixed(2);
+            billItems.innerHTML = billDetails;
+        }
+
+        function validateSelection() {
+            const sections = {
+                snacks: ['nutella', 'noodles', 'lays', 'oreo', 'muffin', 'biscuits', 'namkeen'],
+                grocery: ['atta', 'pasta', 'rice', 'oil', 'sugar', 'dal', 'tea'],
+                beauty: ['soap', 'shampoo', 'lotion', 'faceCream', 'shavingFoam', 'faceMask', 'sanitizer']
+            };
+
+            for (const section in sections) {
+                let count = 0;
+                sections[section].forEach(item => {
+                    if (document.getElementById(item).value > 0) {
+                        count++;
+                    }
+                });
+
+                if (count > 3) {
+                    alert(`You can select up to 3 items in the ${section} section.`);
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
